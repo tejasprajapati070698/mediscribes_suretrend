@@ -1,22 +1,55 @@
 module.exports = {
-  validUsers: [
-    {
-      testDescription: 'Standard valid user payload',
-      firstName: 'Emily',
-      lastName: 'Blunt',
-      username: `emily_${Date.now()}`,
-      industryIndex: 2, 
-      segmentIndex: 1,
-      companyName: 'Hygiena Test Corp',
-      countryIndex: 2,
-      jobTitleIndex: 1,
-      phone: '18005551234',
-      email: `emily.blunt_${Date.now()}@example.com`
-    }
-  ],
+  loginURL: 'https://dev-suretrend.hygiena.com/login',
+  registrationURL: 'https://dev-suretrend.hygiena.com/Register',
+  validUsers:
+  {
+    testDescription: 'Standard valid user payload',
+    firstName: 'Tejas',
+    lastName: 'Prajapati',
+    username: `tejas_${Date.now()}`,
+    industryIndex: 2,
+    segmentIndex: 1,
+    companyName: 'Hygiena Test Corp',
+    countryIndex: 2,
+    jobTitleIndex: 1,
+    phone: '12345678',
+    email: `tejas.prajapati_${Date.now()}@yopmail.com`,
+    companyAddress: '123 Test Street',
+    city: 'Testville',
+    state: 'TestState',
+    zipcode: '12345',
+  },
   invalidData: {
     invalidEmail: 'not-an-email-format',
     shortUsername: 'em',
     invalidPhone: 'abc'
+  },
+  emptyData: {
+    firstName: '',
+    lastName: '',
+    username: '',
+    industryIndex: null,
+    segmentIndex: null,
+    companyName: '',
+    countryIndex: null,
+    jobTitleIndex: null,
+    phone: '',
+    email: '',
+    companyAddress: '',
+    city: '',
+    state: '',
+    zipcode: '',
+  },
+  shortData: {
+    firstName: 'A',
+    lastName: 'B',
+    username: 'a',
+    companyName: '2',
+    phone: '180',
+    email: 'asf',
+    companyAddress: '12',
+    city: '1',
+    state: 'A',
+    zipCode: '1'
   }
 };

@@ -1,5 +1,6 @@
 const locators = require('../src/locators');
-
+const { test, expect } = require('@playwright/test');
+const {loginURL, registrationURL} = require('../src/testData');
 class LoginPage {
   /**
    * @param {import('@playwright/test').Page} page
@@ -14,10 +15,10 @@ class LoginPage {
     this.createAccountLink = page.locator(locators.loginPageLocators.createAccountLink);
   }
 
-  async navigate() {
-    await this.page.goto('https://dev-suretrend.hygiena.com/login');
+  async navigateToLoginPage() {
+    await this.page.goto(loginURL);
   }
-
+ 
   async login(username, password) {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);

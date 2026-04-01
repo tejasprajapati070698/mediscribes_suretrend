@@ -22,6 +22,30 @@ module.exports = {
 
     // Step 2 (Assumed Common selectors based on standard workflows)
     submitButton: 'button:has-text("Register"), button:has-text("Sign up"), button:has-text("Create Account"), button[type="submit"]',
-    captchaWidget: '.g-recaptcha, iframe[title="reCAPTCHA"], iframe[title*="recaptcha"]'
+    captchaWidget: 'span#recaptcha-anchor > div:nth-of-type(1)',
+
+    companyAddressInput: '#Address',
+    cityInput: '#City',
+    stateInput: '#DistrictState',
+    zipCodeInput: '#PostalCode',
+    inoutAgreementCheckbox: 'input#agreeCheckBox',
+    createAccountButton: 'button#btnReg'
+  },
+  signupPageValidationLocators: {
+    firstNameError: '#FirstName ~ .text-danger .errorParagraph',
+    lastNameError: '#LastName ~ .text-danger .errorParagraph',
+    userNameError: '#UserName ~ .text-danger .errorParagraph',
+    industryError: '#Industry ~ .text-danger .errorParagraph',
+    segmentError: '#Segment ~ .text-danger .errorParagraph',
+    companyError: '#CompanyName ~ .text-danger .errorParagraph',
+    countryError: '#CountryId ~ .text-danger .errorParagraph',
+    jobTitleError: '#JobTitle ~ .text-danger .errorParagraph',
+    phoneError: '#PhoneNumber ~ .text-danger .errorParagraph',
+    emailError: '#Email ~ .text-danger .errorParagraph',
+    addressError: '#Address ~ .text-danger .errorParagraph',
+    cityError: '#City ~ .text-danger .errorParagraph',
+    stateError: '#DistrictState ~ .text-danger .errorParagraph',
+    zipCodeError: '#PostalCode ~ .text-danger .errorParagraph',
+    termsAgreementError: '#agreeCheckBox ~ .errorParagraph.text-danger',
   }
 };
